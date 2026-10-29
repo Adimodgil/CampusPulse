@@ -1,38 +1,104 @@
-# CampusPulse — MCA • Python Academic Analytics
+# 📊 CampusPulse — Academic Analytics System
 
-A mini project that analyses student marks and attendance with **Pandas, NumPy and Matplotlib** and shows the results in a browser on localhost.
+**CampusPulse** is a Python-based academic analytics mini-project that analyzes student marks and attendance to generate academic performance insights through an interactive web dashboard.
 
-## Run
+Built using **Python, Pandas, NumPy, and Matplotlib**, it helps visualize student performance, identify low attendance, analyze subject-wise results, and understand academic trends.
+
+## ✨ Features
+
+- 📈 **Performance Dashboard** — View overall academic statistics and performance summaries.
+- 👨‍🎓 **Student Analysis** — Search and filter student records and view rankings.
+- 📚 **Subject-Wise Analysis** — Analyze marks across different subjects.
+- 📊 **Data Visualization** — Generate charts to understand student performance and trends.
+- 💡 **Academic Insights** — Identify students with low attendance and highlight areas that need improvement.
+- 🔄 **CSV-Based Data** — Load and update student records using a CSV file.
+- 🌐 **Local Web Interface** — Access the dashboard through your browser.
+
+## 🛠️ Technologies Used
+
+| Technology | Purpose |
+|---|---|
+| Python | Application logic and web server |
+| Pandas | Data loading, filtering, grouping, and analysis |
+| NumPy | Numerical calculations and statistical operations |
+| Matplotlib | Charts and data visualization |
+| HTML & CSS | Dashboard layout and styling |
+| CSV | Student academic dataset |
+
+## 📁 Project Structure
+
+```text
+CampusPulse/
+├── app.py
+├── analysis.py
+├── charts.py
+├── requirements.txt
+├── README.md
+├── data/
+│   └── students.csv
+├── templates/
+│   └── page.html
+└── static/
+    └── style.css
+```
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Python installed on your system
+- pip package installer
+
+### Installation
+
+**1. Clone the repository**
+
+```bash
+git clone https://github.com/Adimodgil/CampusPulse.git
+cd CampusPulse
+```
+
+**2. Install dependencies**
 
 ```bash
 pip install -r requirements.txt
+```
+
+**3. Run the application**
+
+```bash
 python app.py
 ```
 
-The browser opens at http://localhost:8000 (open it manually if it does not).
+**4. Open the dashboard**
 
-## Files
+Visit [http://localhost:8000](http://localhost:8000) in your browser if it does not open automatically.
 
-| File | Purpose |
-|---|---|
-| `analysis.py` | Pandas + NumPy: loading CSV, grades, ranks, stats, feedback, insights |
-| `charts.py` | Matplotlib charts (returned as PNG) |
-| `app.py` | Small `http.server` web server + HTML building |
-| `templates/page.html`, `static/style.css` | One reusable page layout and simple CSS |
-| `data/students.csv` | 30 students: ID, name, section, attendance, 5 subject marks |
+## 📋 Academic Rules
 
-## Pages
+- A student passes when they score at least 40 marks in every subject.
+- Grades are assigned according to the thresholds implemented in the project.
+- Attendance below 75% is considered low attendance.
+- Updated records can be analyzed by editing the student CSV dataset and refreshing the application.
 
-Dashboard · Students (search/filter + ranking) · Student analysis (`/student/CP101`) · Subjects · Insights
+## 📊 Data Analysis
 
-## Rules used
+CampusPulse uses:
 
-Pass = at least 40 in every subject. Grades: A+ ≥85, A ≥75, B ≥60, C ≥50, D ≥40, else F.
+- **Pandas:** CSV loading, grouping, aggregation, ranking, sorting, and filtering.
+- **NumPy:** Mean, standard deviation, median, histogram calculations, correlation, and polynomial fitting.
+- **Matplotlib:** Bar charts, horizontal bar charts, scatter plots, and histograms.
 
-Low attendance = below 75%. Edit `students.csv` and refresh the page to see new results.
+## 🎯 Project Objective
 
-## Viva pointers
+The objective of CampusPulse is to demonstrate how Python data analysis and visualization libraries can be combined to build a simple academic analytics system that presents student performance data in a useful and understandable format.
 
-- **Pandas:** `read_csv`, `groupby/agg`, `sort_values`, `rank`, `value_counts`, boolean filtering
-- **NumPy:** `mean`, `std`, `median`, `histogram`, `corrcoef`, `polyfit`
-- **Matplotlib:** bar, barh, scatter, histogram — drawn to memory with the `Agg` backend
+## 👨‍💻 Author
+
+**Aditya Modgil**
+
+GitHub: [@Adimodgil](https://github.com/Adimodgil)
+
+---
+
+*CampusPulse — Turning academic data into meaningful insights.*
